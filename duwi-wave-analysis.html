@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DUWI Wave Analysis - PKU-Heliosphere-org</title>
+    <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1>DUWI Wave Analysis</h1>
+            <p>空间物理波动分析工具集</p>
+        </header>
+
+        <nav class="nav">
+            <ul>
+                <li><a href="../index.html">首页</a></li>
+                <li><a href="#overview" class="active">概览</a></li>
+                <li><a href="#features">功能</a></li>
+                <li><a href="#examples">示例</a></li>
+                <li><a href="#installation">安装</a></li>
+            </ul>
+        </nav>
+
+        <section id="overview" class="project-detail">
+            <h2>项目概览</h2>
+            <p>
+                DUWI Wave Analysis 是一个专门用于分析太阳风和行星际空间中等离子体波动的工具包。
+                该项目提供了一系列用于处理和分析空间物理波动数据的Python工具，帮助研究人员更好地理解太阳风和行星际空间中的等离子体波动现象。
+            </p>
+            <p>
+                主要功能包括：
+            </p>
+            <ul>
+                <li>太阳风和行星际空间等离子体数据的读取与预处理</li>
+                <li>等离子体波动特征的识别与分析</li>
+                <li>频谱分析和时频分析</li>
+                <li>波动模式分类和特征提取</li>
+            </ul>
+        </section>
+
+        <section id="features" class="project-detail">
+            <h2>核心功能</h2>
+            <div class="features">
+                <div class="feature">
+                    <h4>数据处理</h4>
+                    <p>支持多种格式的DUWI数据导入和预处理，包括数据清理和校准。</p>
+                </div>
+                <div class="feature">
+                    <h4>波动分析</h4>
+                    <p>提供多种波动分析工具，包括频谱分析、小波分析等。</p>
+                </div>
+                <div class="feature">
+                    <h4>可视化</h4>
+                    <p>强大的可视化功能，支持时间序列、频谱图和波动特征的可视化。</p>
+                </div>
+                <div class="feature">
+                    <h4>统计分析</h4>
+                    <p>包含波动特征的统计分析工具，支持多维数据分析。</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="examples" class="project-detail">
+            <h2>使用示例</h2>
+            <p>以下是一些常见使用场景的代码示例：</p>
+            
+            <h3>基本数据处理</h3>
+            <pre><code>
+import duwi_tools as dt
+
+# 加载太阳风等离子体波动数据
+data = dt.load_data('solar_wind_data.cdf')
+
+# 数据预处理和校准
+processed_data = dt.preprocess(data, calibrate=True)
+            </code></pre>
+            
+            <h3>波动分析</h3>
+            <pre><code>
+# 进行频谱分析和小波变换
+spectrum = dt.spectrum_analysis(processed_data)
+wavelet = dt.wavelet_transform(processed_data)
+
+# 绘制频谱图和小波图
+dt.plot_spectrum(spectrum)
+dt.plot_wavelet(wavelet, time_range=['2023-01-01', '2023-01-02'])
+            </code></pre>
+            
+            <div class="screenshots">
+                <div class="screenshot">
+                    <img src="../images/duwi_spectrum.png" alt="太阳风频谱分析示例">
+                    <div class="caption">典型的太阳风等离子体波动频谱分析结果</div>
+                </div>
+                <div class="screenshot">
+                    <img src="../images/duwi_wavelet.png" alt="小波分析示例">
+                    <div class="caption">太阳风等离子体波动数据的小波分析结果</div>
+                </div>
+            </div>
+        </section>
+
+        <section id="installation" class="project-detail">
+            <h2>安装与使用</h2>
+            <p>从GitHub克隆源代码：</p>
+            <pre><code>git clone https://github.com/PKU-Heliosphere-org/DUWI_wave_analysis_on_GitHubOrg.git
+cd DUWI_wave_analysis_on_GitHubOrg
+pip install -r requirements.txt</code></pre>
+            
+            <h3>依赖项</h3>
+            <ul>
+                <li>Python 3.7+</li>
+                <li>NumPy</li>
+                <li>SciPy</li>
+                <li>Matplotlib</li>
+                <li>pandas</li>
+                <li>PyWavelets</li>
+            </ul>
+        </section>
+    </div>
+    
+    <footer class="footer">
+        <p>&copy; 2024 PKU-Heliosphere-org. All rights reserved.</p>
+    </footer>
+</body>
+</html>
