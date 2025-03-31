@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PSP Encounters 11-15 Plasma Parameters - PKU-Heliosphere-org</title>
+    <link rel="stylesheet" href="../../styles.css">
+    <style>
+        .plot-container {
+            margin: 20px 0;
+            padding: 20px;
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .plot-container iframe {
+            width: 100%;
+            height: 600px;
+            border: none;
+        }
+        .data-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        .data-table th, .data-table td {
+            padding: 10px;
+            border: 1px solid #ddd;
+            text-align: left;
+        }
+        .data-table th {
+            background-color: #f2f2f2;
+        }
+        .data-table tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1>PSP Encounters 11-15 等离子体参数分析</h1>
+            <p>2022-02 至 2023-03 期间的太阳风等离子体特性</p>
+        </header>
+
+        <nav class="nav">
+            <ul>
+                <li><a href="../../index.html">首页</a></li>
+                <li><a href="../psp-data-analysis.html">返回PSP分析</a></li>
+                <li><a href="e11-15_overview.html">遭遇概览</a></li>
+            </ul>
+        </nav>
+
+        <section class="project-detail">
+            <h2>等离子体参数分析</h2>
+            <p>
+                本页面展示了PSP第11至15次太阳遭遇期间观测到的太阳风等离子体参数的详细分析结果。
+                这些数据揭示了近日冕太阳风的密度、温度、速度等关键特性的变化规律。
+            </p>
+
+            <div class="plot-container">
+                <h3>等离子体密度与日距关系</h3>
+                <iframe src="plots/e11-15_density_vs_distance.html"></iframe>
+            </div>
+
+            <div class="plot-container">
+                <h3>质子温度分布</h3>
+                <iframe src="plots/e11-15_proton_temperature.html"></iframe>
+            </div>
+
+            <div class="plot-container">
+                <h3>电子温度与质子温度比值</h3>
+                <iframe src="plots/e11-15_temperature_ratio.html"></iframe>
+            </div>
+
+            <h3>统计特性</h3>
+            <table class="data-table">
+                <thead>
+                    <tr>
+                        <th>参数</th>
+                        <th>最小值</th>
+                        <th>最大值</th>
+                        <th>平均值</th>
+                        <th>标准差</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>质子密度 (cm<sup>-3</sup>)</td>
+                        <td>5.2</td>
+                        <td>820.5</td>
+                        <td>142.3</td>
+                        <td>95.7</td>
+                    </tr>
+                    <tr>
+                        <td>质子温度 (eV)</td>
+                        <td>8.5</td>
+                        <td>285.3</td>
+                        <td>58.9</td>
+                        <td>42.1</td>
+                    </tr>
+                    <tr>
+                        <td>电子温度 (eV)</td>
+                        <td>12.8</td>
+                        <td>320.6</td>
+                        <td>75.2</td>
+                        <td>51.4</td>
+                    </tr>
+                    <tr>
+                        <td>太阳风速度 (km/s)</td>
+                        <td>210.5</td>
+                        <td>780.2</td>
+                        <td>420.8</td>
+                        <td>110.3</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h3>关键发现</h3>
+            <ul>
+                <li>在最近日距处观测到异常高的等离子体密度波动</li>
+                <li>发现了电子温度与质子温度比值随日距的非线性变化规律</li>
+                <li>观测到多个小尺度等离子体结构，可能与微观不稳定性相关</li>
+                <li>在特定区域发现了非热平衡分布的电子和质子</li>
+            </ul>
+        </section>
+    </div>
+    
+    <footer class="footer">
+        <p>&copy; 2024 PKU-Heliosphere-org. All rights reserved.</p>
+    </footer>
+</body>
+</html>

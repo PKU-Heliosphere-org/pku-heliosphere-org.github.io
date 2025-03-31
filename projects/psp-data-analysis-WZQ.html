@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PSP Data Analysis - PKU-Heliosphere-org</title>
+    <link rel="stylesheet" href="../styles.css">
+    <style>
+        .encounter-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin: 20px 0;
+        }
+        .encounter-card {
+            background: #f5f5f5;
+            border-radius: 8px;
+            padding: 15px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .encounter-card h4 {
+            margin-top: 0;
+            color: #2c3e50;
+        }
+        .encounter-card .stats {
+            margin: 10px 0;
+            font-size: 0.9em;
+        }
+        .encounter-card .links {
+            margin-top: 10px;
+        }
+        .encounter-card .links a {
+            display: inline-block;
+            margin-right: 10px;
+            color: #3498db;
+            text-decoration: none;
+        }
+        .encounter-card .links a:hover {
+            text-decoration: underline;
+        }
+        .architecture-diagram {
+            max-width: 100%;
+            margin: 20px 0;
+            padding: 20px;
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1>PSP Data Analysis</h1>
+            <p>帕克太阳探针数据分析与可视化工具集</p>
+        </header>
+
+        <nav class="nav">
+            <ul>
+                <li><a href="../index.html">首页</a></li>
+                <li><a href="#overview">项目概览</a></li>
+                <li><a href="#features">功能特性</a></li>
+                <li><a href="#architecture">程序架构</a></li>
+                <li><a href="#encounters">探测概览</a></li>
+                <li><a href="#examples">使用示例</a></li>
+            </ul>
+        </nav>
+
+        <section id="overview" class="project-detail">
+            <h2>项目概览</h2>
+            <p>
+                PSP Data Analysis 是一个专门用于处理和分析帕克太阳探针（Parker Solar Probe, PSP）观测数据的Python工具包。
+                该项目旨在为太阳物理研究人员提供一套完整的数据处理、分析和可视化工具，帮助研究人员更好地理解太阳风和日冕加热等物理过程。
+            </p>
+            <div class="key-features">
+                <h3>核心优势</h3>
+                <ul>
+                    <li>支持多种PSP仪器数据的读取和处理</li>
+                    <li>自动化的数据下载和更新机制</li>
+                    <li>交互式数据可视化</li>
+                    <li>完整的轨道遭遇数据分析流程</li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="features" class="project-detail">
+            <h2>功能特性</h2>
+            <div class="features">
+                <div class="feature">
+                    <h4>数据获取与处理</h4>
+                    <ul>
+                        <li>自动化数据下载</li>
+                        <li>数据格式转换</li>
+                        <li>数据质量控制</li>
+                        <li>时间序列处理</li>
+                    </ul>
+                </div>
+                <div class="feature">
+                    <h4>数据分析工具</h4>
+                    <ul>
+                        <li>等离子体参数计算</li>
+                        <li>磁场分析</li>
+                        <li>波动分析</li>
+                        <li>统计分析</li>
+                    </ul>
+                </div>
+                <div class="feature">
+                    <h4>可视化功能</h4>
+                    <ul>
+                        <li>交互式时序图</li>
+                        <li>轨道可视化</li>
+                        <li>参数关联分析</li>
+                        <li>自定义绘图模板</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section id="architecture" class="project-detail">
+            <h2>程序架构</h2>
+            <div class="architecture-diagram">
+                <pre>
+PSP_Data_Analysis_WZQ/
+├── data_tools/
+│   ├── downloader.py    # 数据下载工具
+│   ├── reader.py        # 数据读取接口
+│   └── processor.py     # 数据预处理工具
+├── analysis/
+│   ├── plasma.py        # 等离子体分析
+│   ├── magnetic.py      # 磁场分析
+│   └── waves.py         # 波动分析
+├── visualization/
+│   ├── timeseries.py    # 时序图绘制
+│   ├── orbit_plot.py    # 轨道可视化
+│   └── interactive.py   # 交互式绘图
+└── examples/
+    ├── basic_usage.ipynb
+    └── advanced_analysis.ipynb</pre>
+            </div>
+        </section>
+
+        <section id="encounters" class="project-detail">
+            <h2>PSP 太阳遭遇概览</h2>
+            <p>以下是PSP不同轨道遭遇期间的观测数据分析结果：</p>
+            
+            <div class="encounter-grid">
+                <div class="encounter-card">
+                    <h4>Encounter 1-5</h4>
+                    <div class="stats">
+                        <p>时间范围：2018-11 至 2020-06</p>
+                        <p>最近日距：约35.7 Rs</p>
+                    </div>
+                    <div class="links">
+                        <a href="encounters/e1-5_overview.html">详细分析</a>
+                        <a href="encounters/e1-5_plasma.html">等离子体参数</a>
+                        <a href="encounters/e1-5_magnetic.html">磁场观测</a>
+                    </div>
+                </div>
+                
+                <div class="encounter-card">
+                    <h4>Encounter 6-10</h4>
+                    <div class="stats">
+                        <p>时间范围：2020-09 至 2021-11</p>
+                        <p>最近日距：约20.3 Rs</p>
+                    </div>
+                    <div class="links">
+                        <a href="encounters/e6-10_overview.html">详细分析</a>
+                        <a href="encounters/e6-10_plasma.html">等离子体参数</a>
+                        <a href="encounters/e6-10_magnetic.html">磁场观测</a>
+                    </div>
+                </div>
+                
+                <div class="encounter-card">
+                    <h4>Encounter 11-15</h4>
+                    <div class="stats">
+                        <p>时间范围：2022-02 至 2023-03</p>
+                        <p>最近日距：约13.3 Rs</p>
+                    </div>
+                    <div class="links">
+                        <a href="encounters/e11-15_overview.html">详细分析</a>
+                        <a href="encounters/e11-15_plasma.html">等离子体参数</a>
+                        <a href="encounters/e11-15_magnetic.html">磁场观测</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="examples" class="project-detail">
+            <h2>使用示例</h2>
+            <h3>基本数据处理</h3>
+            <pre><code>
+import psp_tools as psp
+
+# 下载特定时间段的PSP数据
+data = psp.download_data('2022-01-01', '2022-01-02')
+
+# 读取并预处理数据
+processed_data = psp.process_data(data)
+
+# 计算等离子体参数
+params = psp.calculate_plasma_params(processed_data)
+            </code></pre>
+            
+            <h3>数据可视化</h3>
+            <pre><code>
+# 创建交互式时序图
+fig = psp.plot_timeseries(params, 
+                         variables=['density', 'temperature', 'velocity'],
+                         interactive=True)
+
+# 保存为HTML文件
+psp.save_plot(fig, 'plasma_parameters.html')
+            </code></pre>
+        </section>
+    </div>
+    
+    <footer class="footer">
+        <p>&copy; 2024 PKU-Heliosphere-org. All rights reserved.</p>
+    </footer>
+</body>
+</html>
